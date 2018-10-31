@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;padding: 0;
+			}
+			body{
+				text-align: center;
+				background-color: #000000;
+			}
+			img{
+				width:1050px;height: 640px;border: solid 5px yellow;
+			}
+		</style>
+		<script>
+			alert("请确认您已年满十八岁哦~亲~");
+			window.onload=function(){
+				var oImg=document.getElementsByTagName("img")[0];
+				var arrys1=["red","green","yellow","red","blue","white"];
+				var mytime=null;
+				var num=0;
+				function bian(){
+					mytime=setInterval(function(){
+						num++;
+						num%=arrys1.length;
+						oImg.style.borderColor=arrys1[num];
+					},200);
+				}
+				bian();
+				oImg.onclick=function(){
+					window.location="new_file.html";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<img src="img/首页.jpg"></img>
+	</body>
+</html>

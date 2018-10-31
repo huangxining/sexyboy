@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>性感萌男在线选伴</title>
+		<style>
+			*{
+				margin: 0;padding: 0;
+			}
+			img{
+				width: 300px;height: 300px;
+			}
+			body{
+				background-color: black;
+				text-align: center;
+			}
+			#all{
+				margin-top: 50px;position: relative;
+			}
+			#div1,#div2{
+				width: 100px;height: 30px;background-color: lightgray;
+				font-size: 14px;position:absolute;margin-top: -40px;
+				text-align: center;line-height: 30px;border: solid 2px red;
+			}
+			#div1{
+				margin-left: 520px;
+			}
+			#div2{
+				margin-left: 720px;
+			}
+			p{
+				font-size:40px;
+				color: red;
+			}
+			#vx img{
+				width: 240px;height: 30px;
+			}
+		</style>
+		<script>
+				alert("您真的满18岁了吗");
+				alert("本站只有萌仔没有萌妹哦~");
+				alert("当家头牌性感美照供您浏览哦");
+				alert("喜欢他记得加VX");
+				alert("么么哒呢亲~~~");
+			window.onload=function(){
+				var oP=document.getElementsByTagName("p");
+				var oDiv1=document.getElementById("div1");
+				var oDiv2=document.getElementById("div2");
+				var oImg=document.getElementsByTagName("img")[0];
+				var arrys1=["red","green","yellow","red","blue","white"];
+				var arrys2=["yellow","red","blue","white"];
+				var arrUrl=["img/h1.jpg","img/h2.jpg","img/h3.jpg","img/h4.jpg","img/h5.jpg"];
+				
+				var mytime=null;
+				var num=0;
+				
+				//初始化
+				 function fnTab(){
+					    oImg.src=arrUrl[num];
+				}
+				fnTab();
+				oDiv1.onclick=function(){
+					num++;
+					num%=arrUrl.length;
+					fnTab();
+				}
+				oDiv1.onmouseover=function(){
+					oDiv1.style.backgroundColor="greenyellow";
+				}
+				oDiv1.onmouseout=function(){
+					oDiv1.style.backgroundColor="lightgray";
+				}
+				oDiv2.onclick=function(){
+					alert("详情+v:dove19950416了解更多");
+				}
+				oDiv2.onmouseover=function(){
+					oDiv2.style.backgroundColor="greenyellow";
+				}
+				oDiv2.onmouseout=function(){
+					oDiv2.style.backgroundColor="lightgray";
+				}
+				
+			
+				
+				//定时器
+				function time1(){
+					var aa=0;
+					mytime=setInterval(function(){
+						aa++;
+						aa%=arrys1.length;
+						oP[0].style.color=arrys1[aa];
+						oP[2].style.color=arrys1[aa];
+						oDiv2.style.borderColor=arrys1[aa];
+					},100)
+				}
+				time1();
+				function time2(){
+					var bb=0;
+					mytime=setInterval(function(){
+						bb++;
+						bb%=arrys2.length;
+						oP[1].style.color=arrys2[bb];
+						oP[3].style.color=arrys2[bb];
+						oDiv1.style.borderColor=arrys2[bb];
+					},100)
+				}
+				time2();
+			}    
+			
+		</script>
+	</head>
+	<body> 
+		<p>在线萌男 </p><p>激情裸聊</p><p>总有一款</p><p>包君满意</p>
+		<div id="all">
+		<div id="div1">太丑了，换一个</div>
+		<div id="div2">喜欢，就他了</div>
+		<div><img /> </div>
+		</div>
+		<div id="vx"><img src="img/VX.png"></div>
+	</body>
+</html>

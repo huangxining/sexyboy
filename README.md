@@ -1,2 +1,2 @@
 # sexyboy
-# https://huangxining.github.io/sexyboy.github.io/
+# https://huangxining.github.io/sexyboy/
